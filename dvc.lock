@@ -1,0 +1,58 @@
+schema: '2.0'
+stages:
+  preprocess:
+    cmd: python src/preprocess.py
+    deps:
+    - path: data/raw/WA_Fn-UseC_-Telco-Customer-Churn.csv
+      hash: md5
+      md5: 0f9de68e012bd3aed5fa7cdc9fc421af
+      size: 977501
+    - path: src/preprocess.py
+      hash: md5
+      md5: 29803b6e609becb96fcf648cdb837b64
+      size: 1751
+    outs:
+    - path: data/processed/cleaned.csv
+      hash: md5
+      md5: 626dfa5448fc12608ac23a1e37aa9821
+      size: 814589
+  train:
+    cmd: python src/train.py
+    deps:
+    - path: data/processed/cleaned.csv
+      hash: md5
+      md5: 626dfa5448fc12608ac23a1e37aa9821
+      size: 814589
+    - path: src/train.py
+      hash: md5
+      md5: b358d7703e71a9abf79b8a7bcfac8bfa
+      size: 1657
+    outs:
+    - path: models/random_forest.pkl
+      hash: md5
+      md5: 37654d8d15e2cc23f3e1ee3ff8ba771a
+      size: 18944018
+  evaluate:
+    cmd: python src/evaluate.py
+    deps:
+    - path: data/processed/cleaned.csv
+      hash: md5
+      md5: 626dfa5448fc12608ac23a1e37aa9821
+      size: 814589
+    - path: models/random_forest.pkl
+      hash: md5
+      md5: a5ce8ce6f3d383f2d93c1e18d9bfc04c
+      size: 18943305
+    - path: src/evaluate.py
+      hash: md5
+      md5: 48c66aa50611feda20cdbf96fb15af1f
+      size: 1964
+    outs:
+    - path: reports/confusion_matrix.png
+      hash: md5
+      md5: a7fab388dc2d93bf40b642ea2a9f905d
+      size: 17588
+    - path: reports/roc_curve.png
+      hash: md5
+      md5: aa9464de1e68a8e52e88aceedc6df133
+      size: 31210

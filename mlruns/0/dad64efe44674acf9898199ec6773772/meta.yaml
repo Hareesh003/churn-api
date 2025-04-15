@@ -1,0 +1,15 @@
+artifact_uri: file:///e:/mlops/mlruns/0/dad64efe44674acf9898199ec6773772/artifacts
+end_time: 1744481342362
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: dad64efe44674acf9898199ec6773772
+run_name: Evaluation Metrics
+run_uuid: dad64efe44674acf9898199ec6773772
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744481342262
+status: 3
+tags: []
+user_id: haree

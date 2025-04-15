@@ -1,0 +1,15 @@
+artifact_uri: file:///e:/mlops/mlruns/0/40b605f0c0d64f97b0933f3abd136e0c/artifacts
+end_time: 1744451965837
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 40b605f0c0d64f97b0933f3abd136e0c
+run_name: RandomForest-200
+run_uuid: 40b605f0c0d64f97b0933f3abd136e0c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744451964054
+status: 4
+tags: []
+user_id: haree
